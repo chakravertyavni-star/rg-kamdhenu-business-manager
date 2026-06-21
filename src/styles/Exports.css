@@ -1,0 +1,75 @@
+.exports-page{
+  padding:40px;
+  max-width:900px;
+  margin:auto;
+}
+
+.exports-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.exports-header h1{
+  color:#1F5E3B;
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.exports-header p{
+  color:#666;
+}
+
+.exports-card{
+  background:white;
+
+  padding:35px;
+
+  border-radius:24px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.exports-card label{
+  font-weight:600;
+}
+
+.exports-card input{
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.pdf-btn,
+.excel-btn{
+  border:none;
+
+  padding:15px;
+
+  border-radius:14px;
+
+  color:white;
+
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+}
+
+.pdf-btn{
+  background:#dc2626;
+}
+
+.excel-btn{
+  background:#1F5E3B;
+}
+
+.pdf-btn:hover,
+.excel-btn:hover{
+  opacity:.9;
+}

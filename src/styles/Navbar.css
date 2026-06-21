@@ -1,0 +1,213 @@
+.navbar{
+  height:80px;
+
+  background:linear-gradient(
+    135deg,
+    #1F5E3B,
+    #2D6A4F
+  );
+
+  display:flex;
+  align-items:center;
+
+  padding:0 20px;
+
+  position:sticky;
+  top:0;
+  z-index:999;
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.15);
+}
+
+/* LEFT */
+
+.navbar-left{
+  width:280px;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+.navbar-logo{
+  height:160px;
+  width:auto;
+
+  object-fit:contain;
+
+  position:relative;
+  margin-top:60px;
+
+  z-index:2;
+}
+
+/* CENTER LINKS */
+
+.nav-links{
+  flex:1;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:55px;
+}
+
+.nav-links a{
+  text-decoration:none;
+
+  color:white;
+
+  font-size:15px;
+  font-weight:300;
+
+  position:relative;
+
+  transition:.3s;
+}
+
+.nav-links a::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:0;
+  height:2px;
+
+  background:#D4AF37;
+
+  transition:.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+
+  color:white;
+
+  font-size:28px;
+
+  cursor:pointer;
+}
+
+/* LARGE TABLET */
+
+@media(max-width:1100px){
+
+  .navbar-left{
+    width:220px;
+  }
+
+  .navbar-logo{
+    height:145px;
+    margin-top: 10px;
+  }
+
+  .nav-links{
+    gap:30px;
+  }
+
+  .nav-links a{
+    font-size:16px;
+  }
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .navbar{
+    height:75px;
+  }
+
+  .navbar-left{
+    width:180px;
+  }
+
+  .navbar-logo{
+    height:120px;
+    margin-top:5px;
+  }
+
+  .nav-links{
+    gap:18px;
+  }
+
+  .nav-links a{
+    font-size:15px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .navbar{
+    height:75px;
+
+    justify-content:space-between;
+  }
+
+  .navbar-left{
+    width:auto;
+  }
+
+  .navbar-logo{
+    height:110px;
+    top:10px;
+  }
+
+  .hamburger{
+    display:block;
+    z-index:1001;
+  }
+
+  .nav-links{
+    position:fixed;
+
+    top:75px;
+    left:0;
+
+    width:100%;
+
+    background:#1F5E3B;
+
+    flex-direction:column;
+
+    gap:0;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.3s ease;
+  }
+
+  .nav-links.active{
+    max-height:500px;
+  }
+
+  .nav-links a{
+    width:100%;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.08);
+  }
+
+  .nav-links a::after{
+    display:none;
+  }
+}
