@@ -92,7 +92,7 @@
 
   margin-bottom:8px;
 
-  color:white;
+  color:white !important;
 
   font-weight:600;
 }
