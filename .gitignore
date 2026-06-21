@@ -5,7 +5,7 @@ backend/node_modules
 # env files
 .env
 backend/.env
-
+backend/utils/createAdmin.js
 # build files
 dist
 build

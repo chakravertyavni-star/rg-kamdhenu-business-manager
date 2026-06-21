@@ -12,40 +12,47 @@ export default function Login() {
   const [error, setError] =
     useState("");
 
-  const handleLogin = async (e) => {
+    const handleLogin = async (e) => {
 
-    e.preventDefault();
+      e.preventDefault();
 
-    try {
+      try {
 
-      const response =
-         await axios.post(
-  "https://kamdhenu-backend.onrender.com/api/auth/login",
-      loginData
-    );
+        const response =
+          await axios.post(
+            "https://kamdhenu-backend.onrender.com/api/auth/login",
+            form
+          );
 
-      localStorage.setItem(
-        "token",
-        response.data.token
-      );
+        localStorage.setItem(
+          "token",
+          response.data.token
+        );
 
-      localStorage.setItem(
-        "username",
-        response.data.username
-      );
+        localStorage.setItem(
+          "username",
+          response.data.username
+        );
 
-      window.location.href =
-        "/dashboard";
+        localStorage.setItem(
+          "loginTime",
+          Date.now()
+        );
 
-    } catch (err) {
+        window.location.href =
+          "/dashboard";
 
-      setError(
-        "Invalid Username or Password"
-      );
+      } catch (err) {
 
-    }
+        console.error(err);
 
-  };
+        setError(
+          "Invalid Username or Password"
+        );
+
+      }
+
+    };
 
   return (
     <div className="login-page">
