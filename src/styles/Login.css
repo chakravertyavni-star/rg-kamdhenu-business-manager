@@ -18,7 +18,7 @@
   width:100%;
   max-width:500px;
 
-  background: black;
+  background:black;
 
   border-radius:28px;
 
@@ -61,7 +61,7 @@
 
 .login-header h1{
 
-  color:white;
+  color:#1F5E3B;
 
   font-size:34px;
 
@@ -91,7 +91,7 @@
 
   margin-bottom:8px;
 
-  color:#333;
+  color:#ddd;
 
   font-weight:600;
 }

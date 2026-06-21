@@ -13,7 +13,7 @@ const app = express();
 /* DATABASE */
  
 connectDB();
-createAdmin();
+ 
 
 /* MIDDLEWARE */
 
